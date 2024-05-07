@@ -1,5 +1,17 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  //look thru each item in the array
+  for (let i = 0; i < array.length; i++) {
+    //look thru the rest of the pile 
+    for (let j = i + 1; j < array.length; j++) {
+      //check if i + j = target
+      if (array[i] + array[j] === target) {
+        return true
+      }
+    }
+  }
+  return false
+
 }
 
 /* 
@@ -8,6 +20,9 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+   //access one element of the array, store it in a variable
+  //access the second element of the array, store it in a variable
+  //add the two then compare it with the target solution
 */
 
 /*
